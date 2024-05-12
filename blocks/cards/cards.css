@@ -7,6 +7,10 @@
   grid-gap: 16px;
 }
 
+.cards.col-2 > ul {
+  grid-template-columns: repeat(auto-fill, minmax(556px, 1fr));
+}
+
 .cards > ul > li {
   border: 1px solid var(--dark-color);
   background-color: var(--background-color);
