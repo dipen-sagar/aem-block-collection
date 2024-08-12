@@ -25,6 +25,7 @@ const AUDIENCES = {
   'returning-visitor': () => !!localStorage.getItem('franklin-visitor-returning'),
 };
 
+
 window.hlx.plugins.add('rum-conversion', {
   url: '/plugins/rum-conversion/src/index.js',
   load: 'lazy',
@@ -35,7 +36,7 @@ window.hlx.plugins.add('experience-decisioning', {
     || Object.keys(getAllMetadata('campaign')).length
     || Object.keys(getAllMetadata('audience')).length,
   options: { audiences: AUDIENCES },
-  load: 'eager1',
+  load: 'eager',
   url: '/plugins/experience-decisioning/src/index.js',
 });
 
